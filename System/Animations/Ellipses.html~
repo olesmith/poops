@@ -1,0 +1,98 @@
+<TABLE CLASS='info'>
+  <TR>
+    <TD CLASS='formula' COLSPAN='3'>
+      <B>Taylor's Formula:</B><BR>
+      [;
+      \underline{r}(t)=
+      \underline{r}(t_0)
+      +
+      \epsilon \underline{r}'(t_0)
+      +
+      \frac{1}{2}
+      \epsilon^2 \underline{r}''(t_0)
+      +
+      o(\epsilon^3)
+      ;]
+    </TD>
+  </TR>
+  <TR>
+    <TD CLASS='formula'>
+      [;
+      \underline{r}(t)
+      =
+      \left( \begin{array}{c} x(t) \\ y(t) \end{array} \right)
+      =
+      \left( \begin{array}{c} at-b\sin{t} \\ a-b\cos{t} \end{array} \right),
+      ;]
+    </TD>
+    <TD CLASS='formula'>
+      [;
+      \underline{r}'(t)
+      =
+      \left( \begin{array}{c} x'(t) \\ y'(t) \end{array} \right)
+      =
+      \left( \begin{array}{c} a-b\cos{t} \\ b\sin{t} \end{array} \right),
+      ;]
+    </TD>
+    <TD CLASS='formula'>
+      [;
+      \underline{r}''(t)
+      =
+      \left( \begin{array}{c} x''(t) \\ y''(t) \end{array} \right)
+      =
+      \left( \begin{array}{c} b\sin{t} \\ b\cos{t} \end{array} \right),
+      \quad \forall t \in \mathbb{R}.
+      ;]
+    </TD>
+  </TR>
+  <TR>
+    <TD CLASS='formula'>
+      [;
+      |\underline{r}(t)|^2
+      =
+      (a-b\cos{t})^2+b^2 \sin^2{t}
+      =
+      a^2+b^2-2ab\cos{t}
+      \ge 0,
+      \quad \forall t \in \mathbb{R}.
+      ;]
+    </TD>
+    <TD CLASS='formula'>
+      [;
+      \underline{t}(t)
+      =
+      \frac{1}{\sqrt{ a^2+b^2-2ab\cos{t} }}
+      \left( \begin{array}{c} a-b\cos{t} \\ b\sin{t} \end{array} \right),
+      ;]
+    </TD>
+    <TD CLASS='formula'>
+      [;
+      \underline{n}(t)
+      =
+      \frac{1}{\sqrt{ a^2+b^2-2ab\cos{t} }}
+      \left( \begin{array}{c} -b\sin{t} \\ a-b\cos{t} \end{array} \right),
+      ;]
+    </TD>
+  </TR>
+  <TR>
+    <TD CLASS='formula'>
+      [;
+      \kappa(t)=
+      \frac{x'y''-x''y'}{ (x'^2+y'^2)^{3/2} }
+      =
+      \frac{ \underline{\widehat{r}}'(t) \cdot \underline{r}''(t) }{ |\underline{r}'(t)|^3},
+      ;]
+    </TD>
+    <TD CLASS='formula'>
+      [;
+      \rho(t)=\frac{1}{\kappa(t)},
+      ;]
+    </TD>
+    <TD CLASS='formula'>
+      [;
+      \underline{C}(t)=
+      \underline{r}(t)+\rho(t) \underline{n}(t).
+      ;]
+    </TD>
+  </TR>
+</TABLE>
