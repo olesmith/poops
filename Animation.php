@@ -103,7 +103,8 @@ class Animation extends Animations
     
     function Animation_Html_Top()
     {
-        return join("",file($this->Animation_Top));
+        return 
+           join("",file($this->Animation_Top));
     }
     
     function Animation_Write_Info()

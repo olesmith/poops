@@ -2,6 +2,7 @@
 
 include_once("R2.php");
 include_once("Animations/Parabolas.php");
+include_once("Animations/Ellipses.php");
 include_once("Animations/Trochoid.php");
 include_once("Animations/Trochoids.php");
 include_once("Animations/Epitrochoid.php");
@@ -12,7 +13,7 @@ class Animations
 {
     use R2;
     use
-        Parabola,
+        Parabola,Ellipses,
         Trochoid,Trochoids,
         Epitrochoid,Epitrochoids,Epitrochoids2;
     

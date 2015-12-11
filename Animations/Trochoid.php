@@ -6,8 +6,8 @@ trait Trochoid
     function TrochoidParms()
     {
         $colors=$this->Animation_Parameters_Colors();
-        $a=$this->Parm("a");
-        $b=$this->Parm("b");
+        $a=abs($this->Parm("a"));
+        $b=abs($this->Parm("b"));
         $nl=$this->Parm("NL");
         $scale=$this->Parm("Scale");
         
@@ -21,10 +21,10 @@ trait Trochoid
         $this->ParmsValues[ "X2" ]=$this->Parms[ "X2" ][ "Default" ]=2.0*$a*$scale*$nl*$this->Pi-$this->Parms[ "X1" ][ "Default" ];
         $this->Parms[ "X2" ][ "ReadOnly" ]=TRUE;
         
-        $this->ParmsValues[ "Y1" ]=$this->Parms[ "Y1" ][ "Default" ]=-1.5*$scale*abs($b);
+        $this->ParmsValues[ "Y1" ]=$this->Parms[ "Y1" ][ "Default" ]=-1.5*$scale*($b+$a);
         $this->Parms[ "Y1" ][ "ReadOnly" ]=TRUE;
 
-        $this->ParmsValues[ "Y2" ]=$this->Parms[ "Y2" ][ "Default" ]=$scale*(2.0*$a+1.5*abs($b));
+        $this->ParmsValues[ "Y2" ]=$this->Parms[ "Y2" ][ "Default" ]=$scale*(2.0*$a+1.5*$b);
         $this->Parms[ "Y2" ][ "ReadOnly" ]=TRUE;
 
         $this->Parms[ "ImageNo" ]=array

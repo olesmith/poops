@@ -95,11 +95,19 @@ trait DR2
     
     function Curvature_Vector($R,$t,$dr=NULL,$d2r=NULL)
     {
+        if ($dr==NULL) { $dr=$this->DR($R,$t); }
+        
         $curvature=$this->Curvature($R,$t,$dr,$d2r);
         if ($curvature!=NULL && $curvature!=0.0)
         {
             $n=$this->Vector2_Transverse($dr);
-            return $this->Vector_Scale($n,1.0/$curvature);
+            $len=$this->Vector_Length($n);
+
+            if ($len>0.0)
+            {
+                $len*=$curvature;
+                return $this->Vector_Scale($n,1.0/$len);
+            }
         }
 
         return array();
