@@ -11,14 +11,7 @@ $animation=new Graphics
 (
    array
    (
-      /* "ColorNames" => array("Red","Red"), */
-      
-      /* "DrawPoints" => TRUE, */
-      /* "DrawPointsR" => 1, */
-      /* "DrawPointsColor" => "Black", */
-      
-      /* "GeneratorMethod" => "Trochoids", */
-    )
+   )
 );
 
 

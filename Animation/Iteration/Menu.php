@@ -12,14 +12,14 @@ trait Animation_Iteration_Menu
             $this->Html_A
             (
                $this->Animation_Iteration_Image_URL($imageno),
-               sprintf("%0".$n."d",$imageno+1)
+               sprintf("%0".$n."d",$imageno)
             );
     }
     
     function Animation_Iteration_Menu()
     {
         $links=array();
-        for ($imageno=0;$imageno<$this->Parm("N");$imageno++)
+        for ($imageno=1;$imageno<=$this->Parm("N");$imageno++)
         {
             array_push
             (

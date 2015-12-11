@@ -1,6 +1,8 @@
 <?php
 
 global $b;
+global $Vertices;
+$Vertices=array();
     
 
 trait Parabola
@@ -65,11 +67,19 @@ trait Parabola
         $colors=$this->Animation_Parameters_Colors();
         $delta=$b*$b-4.0*$a*$c;
 
+        $this->R2_Draw_WCS("White");
+
         $vertex=array(-0.5*$b/$a,-0.25*$delta/$a);
         $parabola=$this->ParametricCurveData($R,$t1,$t2,$ni);
         $this->R2_Draw_Curve_Data($parabola);
 
-        $this->R2_Draw_Node($vertex,"White");
+        global $Vertices;
+        array_push($Vertices,$vertex);
+
+        foreach ($Vertices as $vertex)
+        {
+            $this->R2_Draw_Node($vertex,$colors[ "Color_Vertex" ]);
+        }
  
         return array_pop($parabola);
     }

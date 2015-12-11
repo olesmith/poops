@@ -113,7 +113,11 @@ class Animation extends Animations
         $text="";
         if (file_exists($file))
         {
-            $text=join("",file($file));
+            $text=
+              join("",file($file)).
+              "<P>".
+                "<U>GreaseMonkey:</U> [; \LaTeX ;] on webpages\n".
+                "<A HREF='http://www.greasespot.net/'><IMG SRC='icons/greasemonkey.png'></A>";
         }
 
         return $this->Html_C($text);
