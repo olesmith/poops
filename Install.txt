@@ -1,0 +1,5 @@
+Just copy all the files into a directory accessible by your webserver.
+
+In this directory, create a directory tmp and make it writeable by your webserver.
+
+You should be ready to go.
